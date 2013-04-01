@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>{$Title} - {$Group} - $ActionTitle | $WikiTitle</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Bilbo' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Tienne:400,700,900' rel='stylesheet' type='text/css' />
+
+	<link href="$SkinDirUrl/static/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="$SkinDirUrl/static/css/style.css" rel="stylesheet" type="text/css" />
+
+	<!--[if lt IE 9]>
+	<script src="{{@WEB_ROOT}}static/js/html5shiv.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+	<style type="text/css">
+		.comment-form small{ visibility:visible; }
+	</style>
+
+	<![endif]-->
+
+	<!--HTMLHeader-->
+</head>
+<body>
+	<div id="wrap">
+	<!--PageHeaderFmt-->
+		<div id="nav"><nav>
+			<a id="logo" href="{$ScriptUrl}"><img src="$SkinDirUrl/static/images/smc-logo.png" /></a>
+
+<div id='wikihead' style="float:right;padding:.3em 1em 0 0">
+<form action='{$ScriptUrl}'>
+	<input type="hidden" name="action" value="search" />
+	<input type='text' name='q' value='' class='inputbox searchbox' placeholder="Search..." />
+</form>
+</div>
+		</nav></div>
+	<!--/PageHeaderFmt-->
+
+<!-- main content start -->
+
+<div id="page">
+
+
+		<header>
+			<!--PageTitleFmt-->
+			<h1>{$Title}</h1>
+		</header>
+		<aside class="article-meta">
+			<p class='pagegroup'>Group : <a href='{$ScriptUrl}/{$Group}'>{$Group}</a></p>
+
+			<!--PageActionFmt-->
+			<div id='wikicmds'><label style="float:left">Actions : </label><!--wiki:{$Group}.PageActions {$SiteGroup}.PageActions--></div>
+		</aside>
+
+		<div id="sidebar">
+			<aside>
+				<!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
+			</aside>
+		</div><!-- #sidebar -->
+<div id="entry">
+
+
+		<article>
+			<!--PageText-->
+		</article>
+
+<!-- main content end -->
+
+<!--PageLeftFmt-->
+<!--/PageLeftFmt-->
+
+</div><!-- #entry -->
+<div class="clearfix"></div>
+
+		<footer>
+
+<!--PageFooterFmt-->
+<div id='wikifoot'>
+	<div class='footnav'>
+		<a rel="nofollow" href='{$PageUrl}?action=edit'>$[Edit]</a> -
+		<a rel="nofollow" href='{$PageUrl}?action=diff'>$[History]</a> -
+		<a rel="nofollow" href='{$PageUrl}?action=print' target='_blank'>$[Print]</a> -
+		<a href='{$ScriptUrl}/$[{$Group}/RecentChanges]'>$[Recent Changes]</a> -
+		<a href='{$ScriptUrl}/$[{$SiteGroup}/Search]'>$[Search]</a>
+	</div>
+	<div class='lastmod'>$[Page last modified on {$LastModified}]</div>
+</div>
+<!--HTMLFooter-->
+			<p>Copyleft &copy; Duan Zhiyan</p>
+		</footer>
+</div><!-- #page -->
+	</div><!-- #wrap -->
+</body>
+</html>
